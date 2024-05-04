@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <link href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6bNFB6D3qWgUuRaismcPql80NknQ7NRP5oQ&s" rel="icon">
+    </head>
+    <body style="background-color: beige;">
+        <h1 style="text-align: center;">Quotes</h1>
+        <hr>
+        <table style="margin: auto;">
+            {% for item in data %}
+            <tr>
+                <td>
+                    [{{item["owner"]}}]
+                </td>
+                <td>
+                    {{item["text"]}}
+                </td>
+                <td>
+                    <em>--</em>
+                    <em>{{item["author"]}}</em>
+                </td>
+                <td>
+                    [
+                    <a href="/edit/{{item['_id']}}"><i class="material-icons">mode_edit</i></a>
+                    <a href="/delete/{{item['_id']}}"><i class="material-icons">delete</i></a>
+                    ]
+                </td>
+            </tr>
+            {% endfor %}
+        </table>
+        <hr/>
+        <div style="text-align: center;"><a href="/add">Add a new quote!</a></div>
+        <hr />
+        User = {{user}} (<a href="/logout" style="text-align: center;">Logout</a>)
+    </body>
+</html>

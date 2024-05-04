@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <title>Quotes</title>
+        <link href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6bNFB6D3qWgUuRaismcPql80NknQ7NRP5oQ&s" rel="icon">
+    </head>
+    <body style="background-color: beige;">
+        <h1 style="text-align: center;">Edit this quote...</h1>
+        <form action="/edit" method="POST">
+            <input type="hidden" id="_id" name="_id" value="{{data["_id"]}}" />
+            <table style="margin: auto;">
+                <tr>
+                    <td>
+                        <label for="text">Quote</label>
+                    </td>
+                    <td>
+                        <textarea id="text" name="text" cols="40" rows="5">{{data["text"]}}</textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="author">Author</label>
+                    </td>
+                    <td>
+                        <input type="text" id="author" name="author"
+                        value="{{data["author"]}}"/>        
+                    </td>
+                </tr>
+            </table>
+            <div  style="text-align: center;">
+            <button type="submit">Update</button>
+            <br>
+            <a href="/">Cancel</a>
+            </div>
+        </form>
+    </body>
+</html>

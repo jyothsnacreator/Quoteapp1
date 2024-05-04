@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <title>Quotes</title>
+        <link href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6bNFB6D3qWgUuRaismcPql80NknQ7NRP5oQ&s" rel="icon">
+    </head>
+    <body style="background-color: beige;">
+    <h1 style="text-align: center;">Add a quote...</h1>
+        <form action="/add" method="POST">
+            <div style="text-align: center;">
+                        <label for="text" style="text-align: center;">Quote</label> <br>
+                        <textarea id="text" name="text" cols="40" rows="5"></textarea>
+                        <label for="author" style="text-align: center;">Author</label> <br>
+                        <input type="text" id="author" name="author"/>        
+
+            <button type="submit">Submit</button>
+            <br>
+            <a href="/">Cancel</a>
+        </div>
+        </form> 
+    </body>
+</html>
